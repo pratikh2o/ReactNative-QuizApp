@@ -6,15 +6,24 @@ const Home = () => {
   return (
     <View style={styles.homeContainer}>
       <Title />
-      <View>
+      {/* <View style={{marginVertical: 50}}>
         <Image
-          source={require('../assets/Customer Survey-rafiki.png')}
+          source={{
+            uri: 'https://w7.pngwing.com/pngs/55/420/png-transparent-mind-logic-brain-quiz-riddle-brain-purple-game-violet.png',
+          }}
           style={styles.banner}
         />
+      </View> */}
+      <View
+        style={{
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: '80%',
+        }}>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>Start</Text>
+        </TouchableOpacity>
       </View>
-      <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>Start</Text>
-      </TouchableOpacity>
     </View>
   );
 };
@@ -25,14 +34,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingTop: 20,
   },
-  banner: {
-    width: 300,
-    height: 300,
-  },
+  // banner: {
+  //   width: 100,
+  //   height: 100,
+  // },
 
   button: {
     backgroundColor: '#F72585',
-    width: '30%',
+    width: 100,
     padding: 10,
     borderRadius: 5,
   },

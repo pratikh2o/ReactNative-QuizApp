@@ -3,23 +3,18 @@ import {View, Text, StyleSheet} from 'react-native';
 import Home from './screens/home';
 import Quiz from './screens/quiz';
 import Result from './screens/result';
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
+
+const Stack = createStackNavigator();
 
 const App = () => {
   return (
-    <View style={styles.sectionContainer}>
-      {/* <Text
-        style={{
-          fontWeight: 'bold',
-          fontSize: 50,
-          color: '#F72585',
-          fontStyle: 'italic',
-        }}>
-        QUIZ APP
-      </Text> */}
-      <Home />
-      {/* <Quiz /> */}
-      {/* <Result /> */}
-    </View>
+    <NavigationContainer>
+      <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="Quiz" component={Quiz} />
+      <Stack.Screen name="Result" component={Result} />
+    </NavigationContainer>
   );
 };
 
