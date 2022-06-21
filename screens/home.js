@@ -2,7 +2,7 @@ import React from 'react';
 import {View, TouchableOpacity, StyleSheet, Text, Image} from 'react-native';
 import Title from '../components/title';
 
-const Home = () => {
+const Home = ({navigation}) => {
   return (
     <View style={styles.homeContainer}>
       <Title />
@@ -20,7 +20,11 @@ const Home = () => {
           alignItems: 'center',
           height: '80%',
         }}>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => {
+            navigation.navigate('Quiz');
+          }}>
           <Text style={styles.buttonText}>Start</Text>
         </TouchableOpacity>
       </View>
@@ -33,6 +37,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     paddingTop: 20,
+    backgroundColor: '#7209B7',
+    height: '100%',
   },
   // banner: {
   //   width: 100,

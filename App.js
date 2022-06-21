@@ -1,19 +1,14 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
-import Home from './screens/home';
-import Quiz from './screens/quiz';
-import Result from './screens/result';
+
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
-
-const Stack = createStackNavigator();
+import MyStack from './navigations/nav';
 
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Screen name="Home" component={Home} />
-      <Stack.Screen name="Quiz" component={Quiz} />
-      <Stack.Screen name="Result" component={Result} />
+      <MyStack />
     </NavigationContainer>
   );
 };
