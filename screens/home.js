@@ -5,7 +5,7 @@ import Title from '../components/title';
 const Home = ({navigation}) => {
   return (
     <View style={styles.homeContainer}>
-      <Title />
+      <Title titleText="QUIZBC" />
       {/* <View style={{marginVertical: 50}}>
         <Image
           source={{
